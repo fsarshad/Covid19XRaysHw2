@@ -12,7 +12,7 @@
 # Introduction
 This study looks at utilizing artificial intelligence (AI) to rapidly and reliably detect COVID-19 in chest X-ray pictures. The authors created a huge dataset of chest X-rays, encompassing regular, viral pneumonia, and COVID-19 cases. They then used deep learning methods to build a system to evaluate X-rays and differentiate between these groups. The algorithm achieved extremely high accuracy, with success rates greater than 97% across all categories.  
 
-Link: [https://arxiv.org/abs/2003.13145](#https://arxiv.org/abs/2003.13145)
+Link: https://arxiv.org/abs/2003.13145
 
 This project aims to make the former study a reality while dealing with the intricacies of the latter, with the help of Deep Learning.
 
