@@ -44,15 +44,6 @@ Our project aimed to develop accurate models for COVID-19 detection using chest 
 
 
 
-# Usage 
-
-1. Clone the repository
-2. Install dependencies
-3. Using argparse script for inference
-4. An example
-   
-
-
 # Conclusion 
 
 
