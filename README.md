@@ -14,7 +14,7 @@ The study below looks at utilizing artificial intelligence (AI) to rapidly and r
 
 Link: https://arxiv.org/abs/2003.13145
 
-As a team of three, our project will use deep learning to try and produce similar results. 
+As a team of three, at Columbia University, our project will use deep learning to try and produce similar results. 
 
 # Overview 
 
