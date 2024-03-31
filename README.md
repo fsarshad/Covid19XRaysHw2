@@ -19,15 +19,17 @@
 1. Data Exploration
 2. Split the Dataset
 3. Fine-tune VGG-16, ResNet-18 and DenseNet-121
-### I. Define Transformations
-### II. Handle imbalanced dataset with Weighted Random Sampling (Over-sampling)
-### III. Prepare the Pre-trained models
-### IV. Fine-tune step with Early-stopping
+  * I. Define Transformations
+    * II. Handle imbalanced dataset with Weighted Random Sampling (Over-sampling)
+      * III. Prepare the Pre-trained models
+        * IV. Fine-tune step with Early-stopping
 
 5. Results Evaluation
-### I. Plot confusion matrices
-### II. Compute test-set Accuracy, Precision, Recall & F1-score
-### III. Localize using Grad-CAM
+  * I. Plot confusion matrices
+    * II. Compute test-set Accuracy, Precision, Recall & F1-score
+      * III. Localize using Grad-CAM
+        * IV. Fine-tune step with Early-stopping
+
 5. Inference 
 
 
