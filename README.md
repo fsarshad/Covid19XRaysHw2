@@ -48,3 +48,12 @@ Our project aimed to develop accurate models for COVID-19 detection using chest 
 
 
 # References 
+
+
+Chowdhury, M. E. H., Rahman, T., Khandakar, A., Mazhar, R., Kadir, M. A., Mahbub, Z. B., Islam, K. R., Khan, M. S., Iqbal, A., Al-Emadi, N., Reaz, M. B. I., & Islam, T. I. (2020, June 15). Can ai help in screening viral and covid-19 pneumonia?. arXiv.org. https://arxiv.org/abs/2003.13145 
+
+Huang, G., Liu, Z., van der Maaten, L., & Weinberger, K. Q. (2018, January 28). Densely connected Convolutional Networks. arXiv.org. https://arxiv.org/abs/1608.06993 
+
+Kong, L., & Cheng, J. (2022, August). Classification and detection of COVID-19 X-ray images based on DenseNet and VGG16 feature fusion. Biomedical signal processing and control. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9080057/ 
+
+Rajpurkar, P., Irvin, J., Zhu, K., Yang, B., Mehta, H., Duan, T., Ding, D., Bagul, A., Langlotz, C., Shpanskaya, K., Lungren, M. P., & Ng, A. Y. (2017, December 25). CheXNet: Radiologist-level pneumonia detection on chest X-rays with deep learning. arXiv.org. https://arxiv.org/abs/1711.05225 
