@@ -57,3 +57,5 @@ Huang, G., Liu, Z., van der Maaten, L., & Weinberger, K. Q. (2018, January 28). 
 Kong, L., & Cheng, J. (2022, August). Classification and detection of COVID-19 X-ray images based on DenseNet and VGG16 feature fusion. Biomedical signal processing and control. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9080057/ 
 
 Rajpurkar, P., Irvin, J., Zhu, K., Yang, B., Mehta, H., Duan, T., Ding, D., Bagul, A., Langlotz, C., Shpanskaya, K., Lungren, M. P., & Ng, A. Y. (2017, December 25). CheXNet: Radiologist-level pneumonia detection on chest X-rays with deep learning. arXiv.org. https://arxiv.org/abs/1711.05225 
+
+Wu, C.-J., Park , S., Cho, Y., Kim, Y., & et al. (2019, December). Short-term reproducibility of pulmonary nodule and mass detection in chest radiographs: Comparison among radiologists and four different computer-aided detections with convolutional neural net. Scientific reports. https://pubmed.ncbi.nlm.nih.gov/31822774/ 
