@@ -23,7 +23,7 @@ Our project aimed to develop accurate models for COVID-19 detection using chest 
 # Steps 
 1. Data Exploration
 2. Split the Dataset
-3. Fine-tune VGG-16, ResNet-18 and DenseNet-121
+3. Fine-tune VGG19, ResNet101 and DenseNet201
   * *  I. Define Transformations
   * * II. Handle imbalanced dataset with Weighted Random Sampling (Over-sampling)
   *  III. Prepare the Pre-trained models
