@@ -6,10 +6,10 @@
 2. [Overview](#Overview)
 3. [Methods](#Methods)
   _[Custom Model 1](#Custom Model 1)
-  _[Custom Model 2](#Custom Model 2)
-  _[Custom Model 3](#Custom Model 3)
+    _[Custom Model 2](#Custom Model 2)
+      _[Custom Model 3](#Custom Model 3)
 5. [Results](#Results)
-  _[Fine Tuning](#Fine Tuning)
+   _[Fine Tuning](#Fine Tuning)
 7. [Conclusion](#Conclusion)
 8. [References](#References)
 
