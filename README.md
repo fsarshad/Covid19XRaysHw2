@@ -78,16 +78,22 @@ Notably, in this model, we also incorporate batch normalization layers after eac
 
 ![image](https://github.com/fsarshad/Covid19XRaysHw2/assets/51839755/65d60af7-74ff-4062-a626-68c52e2ac32c)
 
-At first glance, it's clear that after epoch 8, the training loss is consistently lower than the validation loss, and in fact, the validation loss is actually increasing. This suggests that the model is overfitting to the training data. To address this, in the second custom model, we will implement a custom CNN model with dropout layers and regularization techniques to prevent overfitting (more on this later).
+At first glance, it's clear that after epoch 8, the training loss is consistently lower than the validation loss, and in fact, the validation loss is actually increasing. This suggests that the **model is overfitting to the training data**. To address this, in the second custom model, we will implement a custom CNN model with dropout layers and regularization techniques to prevent overfitting (more on this later).
 
-Furthermore, while the rest of the plots look reasonable enough, initially, an interesting observation we made was that both our training and validation loss curves counterintuitively increased over time (as epoch number increases). This puzzled us, but we ultimately realized that this was due to the fact that the Adam optimizer's default learning rate of 1e-3 was too high for our model architecture and the task at hand. To address this and have some decently satisfactory results for our first model, we decided to reduce the learning rate to 1e-4. This helped us achieve a more stable training process and better convergence, though much more tuning was needed to improve the model's performance—as we'll see in future models.
+Furthermore, while the rest of the plots look reasonable enough, **initially**, an interesting observation we made was that **both our training and validation loss curves counterintuitively increased over time** (as epoch number increases). This puzzled us, but we ultimately realized that this was due to the fact that the **Adam optimizer's default learning rate of 1e-3 was too high** for our model architecture and the task at hand. To address this and have some decently satisfactory results for our first model, we decided to reduce the learning rate to 1e-4. This helped us achieve a more stable training process and better convergence, though much more tuning was needed to improve the model's performance—as we'll see in future models. 
 
-![image](https://github.com/fsarshad/Covid19XRaysHw2/assets/51839755/91923ff0-a387-44f6-a066-ea04d8073e8a)
+![image](https://github.com/fsarshad/Covid19XRaysHw2/assets/51839755/c73ef7ef-06a2-4d69-be41-d8f3d6b79903)
 
-As expected, this rather rudimentary model did not perform exceptionally well, with a validation accuracy of around 0.76. The model definitely overfit the training data, as evidenced by the increasing validation loss and the gap between the training and validation accuracy. The decision to reduce the learning rate to 0.0001 helped stabilize the training process, but more sophisticated regularization techniques are needed to improve the model's generalization capabilities. As discussed above, this first custom model serves as a baseline for comparison with the subsequent models. Onwards to Custom Model 2!
+Interestingly enough, despite being more complex than the first custom model, the second custom model actually performed worse in terms of validation accuracy (~78% for model 1 vs. ~68% for model 2). This was a bit surprising to us, but it was a good learning experience to see that more complexity does not always equate to better performance. In this case, the model likely suffered from overfitting due to the increased number of parameters and layers, which could not be effectively regularized by the dropout layers alone. 
+
+Furthermore, another puzzling finding is that after the 8th epoch, the training loss seemingly randomly spikes upward, which is likely an indication of a potential exploding gradient problem. This could be due to the increased complexity of the model, which requires more effective mitigation than just weight initialization and dropout layers. 
+
 
 ![image](https://github.com/fsarshad/Covid19XRaysHw2/assets/51839755/ee9a0077-9729-44dd-a898-762f228fa635)
 
+According to our loss and accuracy curves, it seems that model 3 is the best-performing of our 3 custom models so far, approaching ~85% validation accuracy. This makes sense given the fact that this is the most complex model we've built yet, with a deeper architecture (12 Conv2D layers), more regularization techniques, and a more sophisticated design involving complex callbacks. 
+
+However, we do notice that overfitting is still a concern, as the training loss is consistently lower than the validation loss, and the training accuracy is higher than the validation accuracy—with the latter acting a bit erratic. This suggests that the model is likely learning the training data too well and not generalizing to unseen data. To address this, we may need to further increase the dropout rate, add more regularization, or perhaps improve our data augmentation pipeline.
 
 
 # Conclusion 
