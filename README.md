@@ -2,7 +2,7 @@
 ![image](https://github.com/fsarshad/Covid19XRaysHw2/assets/51839755/894edaf6-47b7-4997-bfc1-e3dfa8650615)
 
 # Content
-1. Introduction
+1. [Introduction](#introduction)
 2. Overview
 3. Methods 
 4. Results
