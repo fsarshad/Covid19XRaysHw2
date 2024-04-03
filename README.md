@@ -94,6 +94,8 @@ According to our loss and accuracy curves, it seems that model 3 is the best-per
 
 However, we do notice that overfitting is still a concern, as the training loss is consistently lower than the validation loss, and the training accuracy is higher than the validation accuracy—with the latter acting a bit erratic. This suggests that the model is likely learning the training data too well and not generalizing to unseen data. To address this, we may need to further increase the dropout rate, add more regularization, or perhaps improve our data augmentation pipeline.
 
+Fine Tuning 
+
 To explore other potential models beyond our custom-built CNNs, we utilized transfer learning with three additional models. After a review of the current literature on this task, we decided on VGG19, DenseNet201, and ResNet101 to investigate. All three are deep networks that have been previously trained on ImageNet images and performed well on computer vision tasks. Following Chowdhury et. al, the three models have also performed well on COVID x-ray imaging tasks.
 
 VGG19 and ResNet101 converge within 15 epochs, and while DenseNet201 exhibits better model accuracy, it begins to diverge after 10 epochs. During the training process, the base models were kept frozen while ‘relu’ and ‘softmax’ layers were added to classify them into three categories (Normal, COVID, and Viral).
