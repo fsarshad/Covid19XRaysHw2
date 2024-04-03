@@ -34,7 +34,7 @@ In the image below, you can see a random sample image for each category. On the 
 
 ![image](https://github.com/fsarshad/Covid19XRaysHw2/assets/51839755/049f3de0-b4de-48da-bc5c-591140220e60)
 
-The COVID-19 image sample on the left shows the chest is unhealthy compared to the Normal Image sample. The pneumonia image sample shows congestion in reference to the normal image. 
+The COVID-19 image sample on the left, above, shows the chest is unhealthy compared to the Normal Image sample. The pneumonia image sample shows congestion in reference to the normal image. 
 
 ![image](https://github.com/fsarshad/Covid19XRaysHw2/assets/51839755/452576a3-2cee-4674-bd13-28e15f9689e6)
 
