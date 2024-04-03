@@ -16,6 +16,11 @@ Link: https://arxiv.org/abs/2003.13145
 
 As a team of three, at Columbia University, our project will use deep learning to try and produce similar results. 
 
+For the final submission of the project, we have included the three requirements: 
+- GitHub README (the current file you are reading)
+- [Final Report](./assignment2_1_sc4040_ajh2259_fsa2139.ipynb)
+- [Frontend Report](./frontend_notebook.ipynb) + [modularized .py files](./code/)
+
 # Overview 
 
 Our project aimed to develop accurate models for COVID-19 detection using chest X-rays. We began by analyzing sample images showcasing positive COVID-19 cases. Following data exploration, we investigated the impact of image augmentation techniques on the dataset. To assess model performance, we built and compared four distinct prediction models: two convolutional neural networks (CNNs) built from scratch and two leveraging transfer learning. We then evaluated these models on their ability to accurately classify X-ray images. This involved analyzing which models achieved superior performance and identifying key hyperparameter settings that contributed to their success. We submitted the top three models to the COVID-19 Diagnostic AI Model Share competition to benchmark their performance against others. Following this initial submission, we continued our exploration, experimenting with additional models and comprehensively comparing their effectiveness. This in-depth analysis allowed us to definitively identify the best-performing models.
