@@ -4,7 +4,7 @@
 # Content
 1. Introduction
 2. Overview
-3. Steps
+3. Methods 
 4. Results
 5. Conclusion
 6. References
@@ -20,12 +20,21 @@ As a team of three, at Columbia University, our project will use deep learning t
 
 Our project aimed to develop accurate models for COVID-19 detection using chest X-rays. We began by analyzing sample images showcasing positive COVID-19 cases. Following data exploration, we investigated the impact of image augmentation techniques on the dataset. To assess model performance, we built and compared four distinct prediction models: two convolutional neural networks (CNNs) built from scratch and two leveraging transfer learning. We then evaluated these models on their ability to accurately classify X-ray images. This involved analyzing which models achieved superior performance and identifying key hyperparameter settings that contributed to their success. We submitted the top three models to the COVID-19 Diagnostic AI Model Share competition to benchmark their performance against others. Following this initial submission, we continued our exploration, experimenting with additional models and comprehensively comparing their effectiveness. This in-depth analysis allowed us to definitively identify the best-performing models.
 
-# Steps 
+# Methods  
+
+(Preview Image Results) 
+
+Below, we created a pie chart to show the distribution of the X-Ray image categories. There are three image categories: COVID-19, Normal, and Viral Pneumonia. 
+
 ![image](https://github.com/fsarshad/Covid19XRaysHw2/assets/51839755/e554b266-8d8e-4bb4-8739-f0c6db9e3198)
 
+Normal Image showed a 67.26% sample size. COVID-19 Image showed a 23.86% sample size and Viral Pneumonia showed an 8.88% sample size. 
+
+In the image below, you can see a random sample image for each category. On the left is COVID-19, in the middle is Normal, and on the right is Pneumonia. 
 
 ![image](https://github.com/fsarshad/Covid19XRaysHw2/assets/51839755/049f3de0-b4de-48da-bc5c-591140220e60)
 
+The COVID-19 image sample on the left shows the chest is unhealthy compared to the Normal Image sample. The pneumonia image sample shows congestion in reference to the normal image. 
 
 ![image](https://github.com/fsarshad/Covid19XRaysHw2/assets/51839755/452576a3-2cee-4674-bd13-28e15f9689e6)
 
@@ -34,9 +43,6 @@ To augment our dataset, we are artificially introducing sample diversity by appl
 By exposing the model to augmented examples during training, it learns to recognize objects/patterns regardless of their orientation, size, position, or lighting conditions within the input images. This enhanced invariance to transformations improves the model's ability to generalize to unseen data—preventing overfitting and encouraging learning more general features. Augmentations like adjustment to contrast make the model robust to noise/variations in real-world data. These preprocessing and augmentation techniques can significantly boost the model's performance, generalization capabilities, and robustness.
 
 Using the given reference code as a starting point, we designed our CNN architecture with multiple convolutional blocks, each consisting of convolutional layers with different filter sizes and followed by max-pooling and dropout layers. The depth of the network increases gradually, with the number of filters doubling at each block (32, 64, 128, 256...). This allows the network to learn increasingly complex and abstract representations as it progresses through the layers. The use of smaller 3x3 filters after the initial 5x5 filters in each block is a common pattern that helps the network learn more complex features in a hierarchical manner. The final layers are fully connected dense layers, which combine the high-level features learned by the convolutional blocks for classification.
-
-
-
 
 For the first custom model, we did not include any explicit regularization techniques like L2 regularization or dropout layers. This was intentional to observe the model's performance without any regularization and to establish a baseline for comparison. As mentioned earlier, the model exhibited signs of overfitting, which we aim to address in the subsequent models (See Custom Models 2 and 3).
 
@@ -69,6 +75,7 @@ Custom Model 3
 Building on models 1 and 2, model 3 utilizes the Swish activation function instead of ReLU or GELU, which has been shown to perform well in various deep-learning tasks, particularly in computer vision applications. The LeCun Normal kernel initializer is employed for all convolutional layers, as it is specifically designed for non-linear activation functions like Swish. For the dense layers, the Xavier Normal initializer is used, which helps maintain the scale of the gradients during backpropagation. We referenced Hanin et al., 2018 for these design choices around kernel initializers.
 
 Notably, in this model, we also incorporate batch normalization layers after each convolutional layer and before the activation function. Batch normalization can aid in training convergence by reducing internal covariate shifts and can also act as a regularizer, potentially improving the model's performance.
+
 # Results 
 
 ![image](https://github.com/fsarshad/Covid19XRaysHw2/assets/51839755/65d60af7-74ff-4062-a626-68c52e2ac32c)
@@ -77,7 +84,7 @@ At first glance, it's clear that after epoch 8, the training loss is consistentl
 
 Furthermore, while the rest of the plots look reasonable enough, initially, an interesting observation we made was that both our training and validation loss curves counterintuitively increased over time (as epoch number increases). This puzzled us, but we ultimately realized that this was due to the fact that the Adam optimizer's default learning rate of 1e-3 was too high for our model architecture and the task at hand. To address this and have some decently satisfactory results for our first model, we decided to reduce the learning rate to 1e-4. This helped us achieve a more stable training process and better convergence, though much more tuning was needed to improve the model's performance—as we'll see in future models.
 
-As expected, this rather rudimentary model did not perform exceptionally well, with a validation accuracy of around 0.76. The model definitely overfit to the training data, as evidenced by the increasing validation loss and the gap between the training and validation accuracy. The decision to reduce the learning rate to 0.0001 helped stabilize the training process, but more sophisticated regularization techniques are needed to improve the model's generalization capabilities. As discussed above, this first custom model serves as a baseline for comparison with the subsequent models. Onwards to Custom Model 2!
+As expected, this rather rudimentary model did not perform exceptionally well, with a validation accuracy of around 0.76. The model definitely overfit the training data, as evidenced by the increasing validation loss and the gap between the training and validation accuracy. The decision to reduce the learning rate to 0.0001 helped stabilize the training process, but more sophisticated regularization techniques are needed to improve the model's generalization capabilities. As discussed above, this first custom model serves as a baseline for comparison with the subsequent models. Onwards to Custom Model 2!
 
 # Conclusion 
 
