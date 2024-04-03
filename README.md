@@ -53,7 +53,7 @@ Using the given reference code as a starting point, we designed our CNN architec
 
 For the first custom model, we did not include any explicit regularization techniques like L2 regularization or dropout layers. This was intentional to observe the model's performance without any regularization and to establish a baseline for comparison. As mentioned earlier, the model exhibited signs of overfitting, which we aim to address in the subsequent models (See Custom Models 2 and 3).
 
-* Custom Model 1 
+* # Custom Model 1 
 
 Initially, for the first iteration of our custom model, we used the default values for the learning rate (0.001) and batch size (32). However, as discussed above, we observed something peculiar in the loss curves: the loss was increasing over time, which indicated that the model had trouble converging to a local/global minima. As a result, we decided to experiment with a smaller learning rate (0.0001) to see if it would help the model converge better.
 
@@ -61,7 +61,7 @@ For the loss function, we chose categorical cross-entropy, which is a standard c
 
 For the optimizer, we used Adam, which is a popular choice for its adaptive learning rate and good convergence properties. At a high level, Adam combines the benefits of momentum and RMSProp, adapting the learning rate for each parameter based on the gradients and their moments. This often leads to faster convergence and better performance compared to other optimizers like stochastic gradient descent (SGD).
 
-* Custom Model 2 
+* # Custom Model 2 
 
 In contrast to custom model 1, this one incorporates several more sophisticated techniques and design choices. Instead of employing standard ReLU activation functions, here, we utilize the GELU (Gaussian Error Linear Unit) activation function for all convolutional and dense layers, except for the final output layer which uses softmax. GELU is a smoother, more continuous shape than ReLU and provides better performance as seen in OpenAI's GPT models.
 
@@ -79,7 +79,7 @@ The ReduceLROnPlateau callback was also implemented to monitor the validation lo
 
 For the second custom model, we didn't alter too many hyperparameters except for the batch size—reducing that from 32 to 16. This was done to see if a smaller batch size would help the model generalize better and prevent overfitting. We also kept the learning rate at 0.0001, as it seemed to work well in the first model. The other hyperparameters were kept the same as the first model to maintain consistency and isolate the effects of the regularization techniques.
 
-* Custom Model 3 
+* # Custom Model 3 
 
 Building on models 1 and 2, model 3 utilizes the Swish activation function instead of ReLU or GELU, which has been shown to perform well in various deep-learning tasks, particularly in computer vision applications. The LeCun Normal kernel initializer is employed for all convolutional layers, as it is specifically designed for non-linear activation functions like Swish. For the dense layers, the Xavier Normal initializer is used, which helps maintain the scale of the gradients during backpropagation. We referenced Hanin et al., 2018 for these design choices around kernel initializers.
 
@@ -105,7 +105,7 @@ According to our loss and accuracy curves, it seems that model 3 is the best-per
 
 However, we do notice that overfitting is still a concern, as the training loss is consistently lower than the validation loss, and the training accuracy is higher than the validation accuracy—with the latter acting a bit erratic. This suggests that the model is likely learning the training data too well and not generalizing to unseen data. To address this, we may need to further increase the dropout rate, add more regularization, or perhaps improve our data augmentation pipeline.
 
-* Fine Tuning 
+* # Fine Tuning 
 
 Transfer Learning Models:
 To explore other potential models beyond our custom-built CNNs, we utilized transfer learning with three additional models. After a review of the current literature on this task, we decided on VGG19, DenseNet201, and ResNet101 to investigate. All three are deep networks that have been previously trained on ImageNet images and performed well on computer vision tasks. Following Chowdhury et. al, the three models have also performed well on COVID x-ray imaging tasks.
