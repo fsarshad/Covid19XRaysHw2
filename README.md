@@ -82,7 +82,13 @@ At first glance, it's clear that after epoch 8, the training loss is consistentl
 
 Furthermore, while the rest of the plots look reasonable enough, initially, an interesting observation we made was that both our training and validation loss curves counterintuitively increased over time (as epoch number increases). This puzzled us, but we ultimately realized that this was due to the fact that the Adam optimizer's default learning rate of 1e-3 was too high for our model architecture and the task at hand. To address this and have some decently satisfactory results for our first model, we decided to reduce the learning rate to 1e-4. This helped us achieve a more stable training process and better convergence, though much more tuning was needed to improve the model's performance—as we'll see in future models.
 
+![image](https://github.com/fsarshad/Covid19XRaysHw2/assets/51839755/91923ff0-a387-44f6-a066-ea04d8073e8a)
+
 As expected, this rather rudimentary model did not perform exceptionally well, with a validation accuracy of around 0.76. The model definitely overfit the training data, as evidenced by the increasing validation loss and the gap between the training and validation accuracy. The decision to reduce the learning rate to 0.0001 helped stabilize the training process, but more sophisticated regularization techniques are needed to improve the model's generalization capabilities. As discussed above, this first custom model serves as a baseline for comparison with the subsequent models. Onwards to Custom Model 2!
+
+![image](https://github.com/fsarshad/Covid19XRaysHw2/assets/51839755/ee9a0077-9729-44dd-a898-762f228fa635)
+
+
 
 # Conclusion 
 
@@ -93,7 +99,6 @@ To overcome this challenge, we had to optimize our code and data pipeline to mak
 to ensure that all team members had access to the same resources and libraries. This required us to coordinate our efforts and ensure that everyone was on the same page. We also had to deal with issues related to GPU memory and runtime limits, which required us to optimize our code and data pipeline to make the most of the available resources. Overall, this experience taught us the importance of effective communication and collaboration in a team setting, as well as the need for adaptability and problem-solving skills when dealing with technical challenges.
 
 # References 
-
 
 Chowdhury, M. E. H., Rahman, T., Khandakar, A., Mazhar, R., Kadir, M. A., Mahbub, Z. B., Islam, K. R., Khan, M. S., Iqbal, A., Al-Emadi, N., Reaz, M. B. I., & Islam, T. I. (2020, June 15). Can ai help in screening viral and covid-19 pneumonia?. arXiv.org. https://arxiv.org/abs/2003.13145 
 
