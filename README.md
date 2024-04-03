@@ -5,13 +5,13 @@
 1. [Introduction](#introduction)
 2. [Overview](#Overview)
 3. [Methods](#Methods)
-  _[Custom Model 1](#Custom Model 1)
-    _[Custom Model 2](#Custom Model 2)
-      _[Custom Model 3](#Custom Model 3)
-5. [Results](#Results)
-   _[Fine Tuning](#Fine Tuning)
-7. [Conclusion](#Conclusion)
-8. [References](#References)
+    * [Custom Model 1](#custom-model-1)
+    * [Custom Model 2](#custom-model-2)
+        * [Custom Model 3](#custom-model-3)
+4. [Results](#Results)
+    * [Fine Tuning](#fine-tuning)
+5. [Conclusion](#Conclusion)
+6. [References](#References)
 
 # Introduction
 The study below looks at utilizing artificial intelligence (AI) to rapidly and reliably detect COVID-19 in chest X-ray pictures. The authors created a huge dataset of chest X-rays, encompassing regular, viral pneumonia, and COVID-19 cases. They then used deep learning methods to build a system to evaluate X-rays and differentiate between these groups. 
