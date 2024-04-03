@@ -84,7 +84,7 @@ Furthermore, while the rest of the plots look reasonable enough, **initially**, 
 
 ![image](https://github.com/fsarshad/Covid19XRaysHw2/assets/51839755/c73ef7ef-06a2-4d69-be41-d8f3d6b79903)
 
-Interestingly enough, despite being more complex than the first custom model, the second custom model actually performed worse in terms of validation accuracy (~78% for model 1 vs. ~68% for model 2). This was a bit surprising to us, but it was a good learning experience to see that more complexity does not always equate to better performance. In this case, the model likely suffered from overfitting due to the increased number of parameters and layers, which could not be effectively regularized by the dropout layers alone. 
+Interestingly enough, despite being more complex than the first custom model, the second custom model performed worse in terms of validation accuracy (~78% for model 1 vs. ~68% for model 2). This was a bit surprising to us, but it was a good learning experience to see that more complexity does not always equate to better performance. In this case, the model likely suffered from overfitting due to the increased number of parameters and layers, which could not be effectively regularized by the dropout layers alone. 
 
 Furthermore, another puzzling finding is that after the 8th epoch, the training loss seemingly randomly spikes upward, which is likely an indication of a potential exploding gradient problem. This could be due to the increased complexity of the model, which requires more effective mitigation than just weight initialization and dropout layers. 
 
@@ -93,6 +93,8 @@ Furthermore, another puzzling finding is that after the 8th epoch, the training 
 According to our loss and accuracy curves, it seems that model 3 is the best-performing of our 3 custom models so far, approaching ~85% validation accuracy. This makes sense given the fact that this is the most complex model we've built yet, with a deeper architecture (12 Conv2D layers), more regularization techniques, and a more sophisticated design involving complex callbacks. 
 
 However, we do notice that overfitting is still a concern, as the training loss is consistently lower than the validation loss, and the training accuracy is higher than the validation accuracy—with the latter acting a bit erratic. This suggests that the model is likely learning the training data too well and not generalizing to unseen data. To address this, we may need to further increase the dropout rate, add more regularization, or perhaps improve our data augmentation pipeline.
+
+
 
 
 # Conclusion 
