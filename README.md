@@ -96,6 +96,7 @@ However, we do notice that overfitting is still a concern, as the training loss 
 
 Fine Tuning 
 
+Transfer Learning Models:
 To explore other potential models beyond our custom-built CNNs, we utilized transfer learning with three additional models. After a review of the current literature on this task, we decided on VGG19, DenseNet201, and ResNet101 to investigate. All three are deep networks that have been previously trained on ImageNet images and performed well on computer vision tasks. Following Chowdhury et. al, the three models have also performed well on COVID x-ray imaging tasks.
 
 VGG19 and ResNet101 converge within 15 epochs, and while DenseNet201 exhibits better model accuracy, it begins to diverge after 10 epochs. During the training process, the base models were kept frozen while ‘relu’ and ‘softmax’ layers were added to classify them into three categories (Normal, COVID, and Viral).
