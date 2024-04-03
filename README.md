@@ -94,8 +94,17 @@ According to our loss and accuracy curves, it seems that model 3 is the best-per
 
 However, we do notice that overfitting is still a concern, as the training loss is consistently lower than the validation loss, and the training accuracy is higher than the validation accuracy—with the latter acting a bit erratic. This suggests that the model is likely learning the training data too well and not generalizing to unseen data. To address this, we may need to further increase the dropout rate, add more regularization, or perhaps improve our data augmentation pipeline.
 
+![image](https://github.com/fsarshad/Covid19XRaysHw2/assets/51839755/40349504-873d-4029-b877-849b2e9a248a)
 
+![image](https://github.com/fsarshad/Covid19XRaysHw2/assets/51839755/048e537f-14b2-418a-9fcd-44caddfaf411)
 
+![image](https://github.com/fsarshad/Covid19XRaysHw2/assets/51839755/c881ff56-5ea6-49f2-b23c-330054b63480)
+
+![image](https://github.com/fsarshad/Covid19XRaysHw2/assets/51839755/f9b971c3-3b60-4b9e-a140-480dc26d6eb9)
+
+![image](https://github.com/fsarshad/Covid19XRaysHw2/assets/51839755/58207364-ba7a-4668-a277-63be4084add9)
+
+![image](https://github.com/fsarshad/Covid19XRaysHw2/assets/51839755/9515c4ed-5fc3-4961-b071-fc70a043e43e)
 
 # Conclusion 
 
