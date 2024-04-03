@@ -94,6 +94,10 @@ According to our loss and accuracy curves, it seems that model 3 is the best-per
 
 However, we do notice that overfitting is still a concern, as the training loss is consistently lower than the validation loss, and the training accuracy is higher than the validation accuracy—with the latter acting a bit erratic. This suggests that the model is likely learning the training data too well and not generalizing to unseen data. To address this, we may need to further increase the dropout rate, add more regularization, or perhaps improve our data augmentation pipeline.
 
+To explore other potential models beyond our custom-built CNNs, we utilized transfer learning with three additional models. After a review of the current literature on this task, we decided on VGG19, DenseNet201, and ResNet101 to investigate. All three are deep networks that have been previously trained on ImageNet images and performed well on computer vision tasks. Following Chowdhury et. al, the three models have also performed well on COVID x-ray imaging tasks.
+
+VGG19 and ResNet101 converge within 15 epochs, and while DenseNet201 exhibits better model accuracy, it begins to diverge after 10 epochs. During the training process, the base models were kept frozen while ‘relu’ and ‘softmax’ layers were added to classify them into three categories (Normal, COVID, and Viral).
+
 ![image](https://github.com/fsarshad/Covid19XRaysHw2/assets/51839755/40349504-873d-4029-b877-849b2e9a248a)
 
 ![image](https://github.com/fsarshad/Covid19XRaysHw2/assets/51839755/048e537f-14b2-418a-9fcd-44caddfaf411)
@@ -105,6 +109,9 @@ However, we do notice that overfitting is still a concern, as the training loss 
 ![image](https://github.com/fsarshad/Covid19XRaysHw2/assets/51839755/58207364-ba7a-4668-a277-63be4084add9)
 
 ![image](https://github.com/fsarshad/Covid19XRaysHw2/assets/51839755/9515c4ed-5fc3-4961-b071-fc70a043e43e)
+
+
+
 
 # Conclusion 
 
