@@ -22,8 +22,6 @@ Our project aimed to develop accurate models for COVID-19 detection using chest 
 
 # Methods  
 
-(Preview Image Results) 
-
 Below, we created a pie chart to show the distribution of the X-Ray image categories. There are three image categories: COVID-19, Normal, and Viral Pneumonia. 
 
 ![image](https://github.com/fsarshad/Covid19XRaysHw2/assets/51839755/e554b266-8d8e-4bb4-8739-f0c6db9e3198)
