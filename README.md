@@ -51,9 +51,9 @@ By exposing the model to augmented examples during training, it learns to recogn
 
 Using the given reference code as a starting point, we designed our CNN architecture with multiple convolutional blocks, each consisting of convolutional layers with different filter sizes and followed by max-pooling and dropout layers. The depth of the network increases gradually, with the number of filters doubling at each block (32, 64, 128, 256...). This allows the network to learn increasingly complex and abstract representations as it progresses through the layers. The use of smaller 3x3 filters after the initial 5x5 filters in each block is a common pattern that helps the network learn more complex features in a hierarchical manner. The final layers are fully connected dense layers, which combine the high-level features learned by the convolutional blocks for classification.
 
+* # Custom Model 1
+  
 For the first custom model, we did not include any explicit regularization techniques like L2 regularization or dropout layers. This was intentional to observe the model's performance without any regularization and to establish a baseline for comparison. As mentioned earlier, the model exhibited signs of overfitting, which we aim to address in the subsequent models (See Custom Models 2 and 3).
-
-* # Custom Model 1 
 
 Initially, for the first iteration of our custom model, we used the default values for the learning rate (0.001) and batch size (32). However, as discussed above, we observed something peculiar in the loss curves: the loss was increasing over time, which indicated that the model had trouble converging to a local/global minima. As a result, we decided to experiment with a smaller learning rate (0.0001) to see if it would help the model converge better.
 
