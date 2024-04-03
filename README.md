@@ -88,7 +88,6 @@ Interestingly enough, despite being more complex than the first custom model, th
 
 Furthermore, another puzzling finding is that after the 8th epoch, the training loss seemingly randomly spikes upward, which is likely an indication of a potential exploding gradient problem. This could be due to the increased complexity of the model, which requires more effective mitigation than just weight initialization and dropout layers. 
 
-
 ![image](https://github.com/fsarshad/Covid19XRaysHw2/assets/51839755/ee9a0077-9729-44dd-a898-762f228fa635)
 
 According to our loss and accuracy curves, it seems that model 3 is the best-performing of our 3 custom models so far, approaching ~85% validation accuracy. This makes sense given the fact that this is the most complex model we've built yet, with a deeper architecture (12 Conv2D layers), more regularization techniques, and a more sophisticated design involving complex callbacks. 
@@ -99,10 +98,6 @@ However, we do notice that overfitting is still a concern, as the training loss 
 # Conclusion 
 
 In all honesty, the biggest challenge we faced was managing our developer environment(s). Since we were instructed to initially use Google Colab, we mainly developed on that platform. However, we encountered issues with the runtime limits which made it difficult to train large models without Colab giving us Runtime disconnected errors "due to inactivity or reaching its maximum duration." Since we also did not have Colab Pro or access to Google Cloud credits via the course, we had to switch over to running everything locally on our machines which was a bit of a hassle—especially since we all have different machines (2 Macs and 1 Windows). This required us to install all the necessary libraries and dependencies on our local machines, which took some time to get right. We also had to deal with issues related to GPU memory and runtime limits, which required us to optimize our code and data pipeline to make the most of the available resources. Overall, this experience taught us the importance of adaptability and problem-solving skills when dealing with technical challenges, as well as the need for effective resource management in machine learning projects.
-
-To overcome this challenge, we had to optimize our code and data pipeline to make the most of the available resources. We also had to switch to using local environments like Jupyter Notebooks and Google Cloud Platform to run more computationally intensive experiments. This experience taught us the importance of adaptability and problem-solving skills when dealing with technical challenges, as well as the need for effective resource management in machine learning projects.
-
-to ensure that all team members had access to the same resources and libraries. This required us to coordinate our efforts and ensure that everyone was on the same page. We also had to deal with issues related to GPU memory and runtime limits, which required us to optimize our code and data pipeline to make the most of the available resources. Overall, this experience taught us the importance of effective communication and collaboration in a team setting, as well as the need for adaptability and problem-solving skills when dealing with technical challenges.
 
 # References 
 
