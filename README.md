@@ -1,5 +1,5 @@
 # Covid-19 Chest X-Rays Deep Learning 
-![image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fmedium.com%2Fnlplanet%2Ftwo-minutes-nlp-11-word-embeddings-models-you-should-know-a0581763b9a9&psig=AOvVaw3poF7h7NeH00gFghMK__e_&ust=1714601806678000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCMjy9c776oUDFQAAAAAdAAAAABAE)
+![image](https://github.com/fsarshad/NLPAdvMLHW3/assets/51839755/f8186818-767e-42ed-ba4b-53ab8d0d3822)
 
 # Content
 1. [Introduction](#introduction)
